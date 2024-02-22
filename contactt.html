@@ -1,0 +1,136 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER</title>
+    
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="logo">
+                    <img src="" alt="">
+                    <span class="nav-item">PredictMyHealth</span>
+                </a>
+            </li>
+            <li>
+                <a href="customer.html">
+                    <i class="fa fa-child"></i>
+                    <span class="nav-item">LUNG CANCER</span>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <i class="fa fa-user"></i>
+                    <span class="nav-item">CHRONIC KIDNEY</span>
+                </a>
+            </li>
+            <li>
+                <a href="vault.html">
+                    <i class="fa fa-cogs"></i>
+                    <span class="nav-item">Manage Vault</span>
+                </a>
+            </li>
+            <li>
+                <a href="entity.html">
+                    <i class="fa fa-cogs"></i>
+                    <span class="nav-item">Manage Entity</span>
+                </a>
+            </li>
+            <li>
+                <a href="permission.html">
+                    <i class="fa fa-plus"></i>
+                    <span class="nav-item">Add Permissions</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class="fa fa-sign-out"></i>
+                    <span class="nav-item">Log Out</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+   
+     <section class="home">
+        <div class="content">
+            <form action="{{ url_for('predict')}}"method="post">
+                <div class="form-group">
+                    <label>AGE*</label>
+                    <input type="text" name="AGE"  placeholder="Enter age" required="required">
+                </div>
+                <div class="form-group">
+                    <label >Smoking*</label>
+                    <input type="text" name="SMOKING"  placeholder="Enter status" required="required">
+                </div>
+                <div class="form-group">
+                    <label >Yellow Fingers</label>
+                    <input type="text" name="YELLOW_FINGERS"  placeholder="Enter" required="required">
+                </div>
+                <div class="form-group">
+                    <label >Anxiety</label>
+                    <input type="text" name="ANXIETY" placeholder="Enter security answer" required="required">
+                </div>
+                <div class="form-group">
+                    <label >Peer pressure</label>
+                    <input type="text" name="PEER_PRESSURE"  placeholder="Enter recovery email" required="required">
+                </div>
+                <div class="form-group">
+                    <label >Chronic disease</label>
+                    <input type="text" name="CHRONIC DISEASE"  placeholder="Enter recovery email" required="required">
+                </div>
+                <div class="form-group">
+                    <label >fatigue</label>
+                    <input type="text" name="FATIGUE"  placeholder="Enter Phone number" required="required">
+                </div>
+                <div class="form-group">
+                    <label >allergy</label>
+                    <input type="text" name="ALLERGY"  placeholder="Enter Secondary Phone number" required="required">
+                </div>
+                <div class="form-group">
+                    <label >wheezing</label>
+                    <input type="text" name="WHEEZING"  placeholder="Enter security question" required="required">
+                </div>
+                <div class="form-group">
+                    <label >alcohol consuming</label>
+                    <input type="text" name="ALCOHOL"  placeholder="Enter security answer" required="required">
+                </div>
+                <div class="form-group">
+                    <label >coughing</label>
+                    <input type="text" name="COUGHING"  placeholder="Enter security answer" required="required">
+                </div>
+                <div class="form-group">
+                    <label>shortness of breath</label>
+                    <input type="text" name="SHORTNESS OF BREATH"  placeholder="Enter security answer" required="required">
+                </div>
+                <div class="form-group">
+                    <label>swallowing difficulty</label>
+                    <input type="text" name="SWALLOWING DIFFICULTY"  placeholder="Enter security answer" required="required">
+                </div>
+                <div class="form-group">
+                    <label>chest pain</label>
+                    <input type="text" name="CHEST PAIN"  placeholder="Enter security answer" required="required">
+                </div>
+                <div class="form-group">
+                    <label>GENDER*</label>
+                    <input type="text" name="GENDER"  placeholder="Enter your GENDER" required="required">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-large"><span style="color: black;"> You have Lung Cancer</span></button></p>
+                
+    </form>
+
+    <br>
+    <br>
+    <h9 style="color:Violet;">
+    {{ prediction_text }} 
+</h9>
+        </div>
+    </section>
+    
+</body>
+</html>
